@@ -10,18 +10,18 @@ if ( ! ( isset($_SESSION['logago']) && $_SESSION['logago'] == true)){
 		header("Location: /avaliacao_competencia/index.php?")	;
 	}
 }	
-	
+
 function validarUsuario($usuario,$senha){
 			
 	if ( ( $usuario == 'admin' && $senha == 'admin')){
 		if (session_start()) {
 			echo "Sessão iniciada";
 		}
-		
-			
+				
 		$_SESSION['usuario'] =$usuario;
 		$_SESSION['logago'] = TRUE;
-	var_dump($_SESSION);
+		var_dump($_SESSION);
+		
 		return true;
 	}
 	
