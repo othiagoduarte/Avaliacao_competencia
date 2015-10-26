@@ -1,1 +1,0 @@
-{"id":1,"nome":"Thiago Duarte dos Santos","senha":"12345","usuario":"thiago","email":"thiago-duarte@outlook.com","rg":"5106029886","cpf":"02070168018","mae":"maria","endereco":"Rua arroio Feijo,1039","estado":"1;","cidade":"1","telefone":"51 89201771","pai":"jo\u00e3o","comentario":null}

@@ -21,11 +21,11 @@ class Usuario extends CI_Model {
   	
 	public function __construct(){
 	   	parent::__construct();
-	   	$this->load->helper('url');
+	   		
+		$this->load->helper('url');
 		$this->load->helper('file');
 		$this->load->library('arquivo','arquivo');	
 	}
-			
 	function GetUsuarios(){
 			
 		$usuarios = array();

@@ -81,3 +81,8 @@ if(! isset($usuario))
             </select>				    		
     </div> 
 </div>
+<div class="row ">
+  <div class="input-field col s9">
+    <input  id="comentarios" type="text" class="validate" name="comentario" value = "<?php echo $usuario->comentario ?>">
+    <label >Comentarios</label>
+  </div>

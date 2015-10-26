@@ -1,8 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
 class arquivo
 {
-	public $path = 	'files/arquivo.txt';
+	public $path = "";
 	
+	public function __construct()
+    {
+       $this->path = 'files/usuarios.txt';
+    }
 	function lerArquivo()
 	{
 		$linhas = file($this->path);

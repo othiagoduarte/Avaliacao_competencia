@@ -49,8 +49,10 @@
 	height:40px;
 }
 
-
-
-
+.conteudo
+{
+	min-height: 640px;
 }
-
+.texto-footer{
+	color:white;
+}

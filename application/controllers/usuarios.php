@@ -41,6 +41,7 @@ class Usuarios extends CI_Controller {
 		$this->load->view('includes/header',$data);
 		$this->load->view('includes/menu');
 		$this->load->view('usuario/listar');
+		$this->load->view('includes/footer');
 		
 	}
 	public function teste()
@@ -59,6 +60,7 @@ class Usuarios extends CI_Controller {
 		$this->load->view('includes/header',$data);
 		$this->load->view('includes/menu');
 		$this->load->view('usuario/editar');
+		$this->load->view('includes/footer');
 
 	}
 	public function do_editar()
@@ -79,7 +81,9 @@ class Usuarios extends CI_Controller {
 			
 			$this->load->view('includes/header',$data);
 			$this->load->view('includes/menu');
-			$this->load->view('usuario/listar');		
+			$this->load->view('usuario/listar');
+			$this->load->view('includes/footer');
+					
 		}else
 		{
 			$data = array();
@@ -91,6 +95,7 @@ class Usuarios extends CI_Controller {
 			$this->load->view('includes/header',$data);
 			$this->load->view('includes/menu');
 			$this->load->view('usuario/editar');
+			$this->load->view('includes/footer');
 			
 		}				
 	}
@@ -107,6 +112,7 @@ class Usuarios extends CI_Controller {
 		$this->load->view('includes/header',$data);
 		$this->load->view('includes/menu');
 		$this->load->view('usuario/excluir');
+		$this->load->view('includes/footer');
 
 	}
 	public function do_excluir()
@@ -133,6 +139,7 @@ class Usuarios extends CI_Controller {
 		$this->load->view('includes/header',$data);
 		$this->load->view('includes/menu');
 		$this->load->view('usuario/visualizar');
+		$this->load->view('includes/footer');
 
 	}
 	function do_cadastrar()
@@ -154,6 +161,7 @@ class Usuarios extends CI_Controller {
 			$this->load->view('includes/header',$data);
 			$this->load->view('includes/menu');
 			$this->load->view('usuario/visualizar');
+			$this->load->view('includes/footer');
 										
 		}else{
 			
@@ -167,6 +175,7 @@ class Usuarios extends CI_Controller {
 			$this->load->view('includes/header',$data);
 			$this->load->view('includes/menu');
 			$this->load->view('usuario/editar');
+			$this->load->view('includes/footer');
 		}
 		
 	}
