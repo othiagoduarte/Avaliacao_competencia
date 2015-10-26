@@ -2,19 +2,17 @@
 	<h4 class="center">Lista de usuarios</h4>
 	<table  class="bordered " >
 		<tr>
-			<th>#</th>	
 			<th>Nome</th>
 			<th>Detalhe</th>
 			<th>Editar</th>
 			<th>Excluir</th>
 		</tr>
-		<?php foreach ($lista_usuarios as $usuario) : ?>
+		<?php foreach ($lista_usuarios as $iten) : ?>
 				<tr>
-					<td> <?php echo $usuario['id'] ?> </td>
-					<td> <?php echo $usuario['nome'] ?></td>
-					<td> <a class="btn-floating btn-small" id="btnDetalhes"  ><i  class="material-icons">toc</i></a></td>
-					<td> <a class="btn-floating btn-small" id="btnEditar"  ><i  class="material-icons">mode_edit</i></a></td>
-					<td> <a class="btn-floating btn-small red" id="btnExcluir"  ?><i  class="material-icons">delete</i></a></td>					
+					<td> <?php echo $iten->nome ?></td>
+					<td> <a class="btn-floating btn-small yellow" href="<?php echo base_url('usuarios/detalhe?id=').$iten->id ?>" ><i  class="material-icons">toc</i></a></td>
+					<td> <a class="btn-floating btn-small blue" href="<?php echo base_url('usuarios/editar?id=').$iten->id ?>"  ><i  class="material-icons">mode_edit</i></a></td>
+					<td> <a class="btn-floating btn-small red" href="<?php echo base_url('usuarios/excluir?id=').$iten->id ?>" ><i  class="material-icons">delete</i></a></td>					
 				</tr>
 		<?php endforeach; ?>
 	</table>
@@ -26,26 +24,7 @@
 	<!-- Modal Structure - Cadastrar Novo Usuario -->
 	<div id="cadastrarUsuario" class="modal">
 		<div class="modal-content">
-		<?php include "inserir.php" ?>	
+			<?php include "inserir.php" ?>	
 		</div>
-	</div>
-	<!-- Modal Structure - Editar Usuario -->
-	<div id="editarUsuario" class="modal">
-		<div class="modal-content">
-			<?php include "editar.php" ?>	
-		</div>
-	</div>
-	<!-- Modal Structure - Excluir Usuario -->
-	<div id="excluirUsuario" class="modal">
-		<div class="modal-content">
-			<?php include "excluir.php" ?>	
-		</div>
-	</div>
-	<!-- Modal Structure - Excluir Usuario -->
-	<div id="detalhesUsuario" class="modal">
-		<div class="modal-content">
-			<?php include "detalhe.php" ?>	
-		</div>
-	</div>
 	</div>
 </div>

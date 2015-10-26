@@ -13,27 +13,34 @@
 	font-size: inherit;
 }
 
+
+
+
 .marginRight4
 {
 	margin-right: 4px;
 }
 
+
+
+
 @media (min-width: 601px) {
-	
-	.percentMarginLeft13
-	{
-		margin-left:13% !important;
-	}
-	
-	.percentMarginLeft24
-	{
-		margin-left:24% !important;
-	}
-	
-	.rightParcial
-	{
-		float:right;
-	}
+
+.percentMarginLeft13
+{
+	margin-left:13% !important;
+}
+
+.percentMarginLeft24
+{
+	margin-left:24% !important;
+}
+
+
+.rightParcial
+{
+	float:right;
+}
 
 }
 
@@ -45,5 +52,5 @@
 
 
 
-
+}
 
