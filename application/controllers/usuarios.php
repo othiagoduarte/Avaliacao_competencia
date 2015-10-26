@@ -69,7 +69,7 @@ class Usuarios extends CI_Controller {
 		{
 			$model = $this->GetUsuarioInPost();
 			$model->update();
-			
+			header("Location: /avaliacao"); #remover após revisar o fluxo de telas
 			$data = array();
 			$data['title'] = 'Editar';
 			$data['mensagem'] = "Sucesso ao editar os dados do usuário";
@@ -79,8 +79,7 @@ class Usuarios extends CI_Controller {
 			
 			$this->load->view('includes/header',$data);
 			$this->load->view('includes/menu');
-			$this->load->view('usuario/listar');
-			echo $retorno;			
+			$this->load->view('usuario/listar');		
 		}else
 		{
 			$data = array();
@@ -114,6 +113,7 @@ class Usuarios extends CI_Controller {
 	{
 		$model =  $this->GetUsuarioInPost();
 		$model->delete();
+		header("Location: /avaliacao"); #remover após revisar o fluxo de telas
 		$data = array();
 		$data['title'] = 'Visualizar';
 		$this->load->view('includes/header',$data);
@@ -143,7 +143,7 @@ class Usuarios extends CI_Controller {
 			
 			$model = $this->GetUsuarioInPost();	
 			$model->insert();
-			
+			header("Location: /avaliacao"); #remover após revisar o fluxo de telas
 			$data['title'] = 'Cadastro';
 			$data['mensagem'] = "Sucesso ao cadastrar usuário";
 			$data['usuario'] = $this->usuario->getbyId($this->usuario->lasId());		
