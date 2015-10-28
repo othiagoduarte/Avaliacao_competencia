@@ -50,8 +50,14 @@
 .conteudo
 {
 	min-height: 640px;
+	
 }
 .texto-footer{
 	color:white;
 	font-size: 10px;
+}
+.login{
+	
+	max-width: 300px;
+	
 }
