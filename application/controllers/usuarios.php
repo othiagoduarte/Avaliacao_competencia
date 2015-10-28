@@ -44,10 +44,6 @@ class Usuarios extends CI_Controller {
 		$this->load->view('includes/footer');
 		
 	}
-	public function teste()
-	{
-		var_dump($this->usuario->get(1));
-	}
 	public function editar()
 	{
 		$id = $this->input->get('id');

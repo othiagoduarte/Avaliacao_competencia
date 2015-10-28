@@ -10,8 +10,9 @@ class Login extends CI_Controller {
 	}
 	
 	function index()
-	{	session_start();
-			
+	{	
+		session_start();
+		
 		$data = array();
 		$data['title'] = 'Login';	
 		$this->load->view('includes/header',$data);
@@ -22,12 +23,12 @@ class Login extends CI_Controller {
 	{		
 		$this->usuario->usuario = $this->input->post('usuario');
 		$this->usuario->senha = $this->input->post('senha');
-		var_dump($this->input->post());
+
 		if ($this->usuario->logar()) {
 			$_SESSION['logado'] ==TRUE;
 			header("Location: /avaliacao")	;
 		}else {
-			//header("Location: /avaliacao/login?err")	;
+			header("Location: /avaliacao/login?err")	;
 		}
 			
 	}
