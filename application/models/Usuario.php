@@ -8,7 +8,7 @@ class Usuario extends CI_Model {
 	public $nome = "";
 	public $senha = "";
 	public $usuario = "";
-	public $email = "";
+	public $email = "";	
 	public $rg = "";
 	public $cpf = "";
 	public $mae ="";
@@ -57,14 +57,15 @@ class Usuario extends CI_Model {
 		}
 		return new Usuario(); 
 	}
-	public function getbyUsuario($Usuario)	{
+	public function getbyUsuario($nomeUsuario)	{
 		
 		$usuarios =  $this->GetUsuarios();
-		
-		foreach ($usuarios as $Usuario) 
+	
+		foreach ($usuarios as $usuario) 
 		{
-			if ($usuario->usuario == $Usuario ) 
+			if ($usuario->usuario == $nomeUsuario ) 
 			{
+				var_dump($usuario);
 				return $usuario;
 			}
 		}
@@ -81,23 +82,15 @@ class Usuario extends CI_Model {
 	{
 		$usuarios =  $this->GetUsuarios();
 		$usuariosJson = array();
-		
-		var_dump($usuarios);
+			
 		foreach ($usuarios as $usuario)
 		{
-			var_dump($usuario);
-			var_dump($this);
 			if ($usuario->id == $this->id) {
-				
-				var_dump($usuario);
 				$usuario = $this;
-				var_dump($usuario);
-				
 			}
 			
 			$usuariosJson[]	= json_encode($usuario);
 		}
-		var_dump($usuariosJson);
 		$this->arquivo->update($usuariosJson);
 	}
 	public function delete()
@@ -116,10 +109,10 @@ class Usuario extends CI_Model {
 		$this->arquivo->update($usuariosJson);
 	}
 	function logar(){
-		#verifica se o arquivo esta vazio
-		if (count($this->arquivo->lerArquivo()) > 0) {
+		
+		if (count($this->GetUsuarios()) > 0) {
 			$usuario = $this->getbyUsuario($this->usuario);
-			return $usuario->usuario === $this->usuario && $usuario->senha ===$this->senha;
+			return $usuario->usuario == $this->usuario && $usuario->senha == $this->senha;
 		}
 		else{
 			return $this->usuario === 'admin' && $this->senha === 'admin' ;		

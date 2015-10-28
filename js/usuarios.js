@@ -1,27 +1,17 @@
 $(document).ready(function()
 {
 	selecionar();
-	editarUsuario();
-	excluirUsuario();
-	cadastrarUsuario();
-	detalhesUsuario();		
+	modalCadastro();
+	
 });
-function editarUsuario($codProduto){
+//Functions usadas pelo Materizlized
+function selecionar(){
 
-	var btnModal=$('#btnEditar');
-	
-	btnModal.unbind('click');
-	btnModal.bind('click',function()
-	{
-		var modal=$('#editarUsuario');
-		
-		modal.css('max-height',700);
-		modal.openModal();		
-			
-	});	
-	
+    $('select').material_select();
+
 }
-function cadastrarUsuario(){
+
+function modalCadastro(){
 
 	var btnModal=$('#btnCadastrar');
 	
@@ -35,50 +25,14 @@ function cadastrarUsuario(){
 			
 	});
 }
-function detalhesUsuario(){
+//Funções Ajax
 
-	var btnModal=$('#btnDetalhes');
+function cadastrarUsuario(){
 	
-	btnModal.unbind('click');
-	btnModal.bind('click',function()
-	{
-		var modal=$('#detalhesUsuario');
-		
-		modal.css('max-height',700);
-		modal.openModal();		
-			
+	var btnCadastrar = $('#cadastrar');
+	$btnCadastrar.unbind('click');
+	var servico = "http://localhost:8080/avaliacao/";
+	$get(servico,function(){
+		alert($Data);
 	});
 }
-
-function detalhes($teste){
-
-	alert($teste);
-
-	var modal=$('#detalhesUsuario');
-	modal.css('max-height',700);
-	modal.openModal();		
-		
-
-}
-
-
-function excluirUsuario(){
-
-	var btnModal=$('#btnExcluir');
-	
-	btnModal.unbind('click');
-	btnModal.bind('click',function()
-	{
-		var modal=$('#excluirUsuario');
-		
-		modal.css('max-height',700);
-		modal.openModal();		
-			
-	});
-	
-}
-function selecionar(){
-
-    $('select').material_select();
-
-  }

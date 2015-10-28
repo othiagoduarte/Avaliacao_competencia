@@ -7,10 +7,13 @@
       </div>
     <form class="col s12" action="<?php echo base_url('usuarios/do_excluir')?>" method="POST" >
       <?php include "detalhe.php"?>
-        <div class="input-field col s2">
+        <div class="input-field col s3">
           <button class="btn waves-effect waves-light red" type="submit" >Excluir
             <i class="material-icons right"></i>
           </button>
+           <a class="btn waves-effect waves-light red" href="<?php echo base_url('usuarios')?>">Cancelar
+              <i class="material-icons"></i>
+           </a>
           </div>
        </div>
     </form>

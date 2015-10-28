@@ -60,12 +60,13 @@ class DataBase extends CI_Controller {
 			$dadosDataBase = json_decode($dadosArquivo[0]);
 		}
 
-		$data = array();		
-		$data['title'] = 'Dados de acesso';
-		$data['dados'] = $dadosDataBase;
+		$data = array();
+		$data['title'] = 'Cadastrar';
+		$data['mensagemRetorno'] = "Sucesso ao alterar os dados de configuração de acesso ao base de dados";
+						
 		$this->load->view('includes/header',$data);
 		$this->load->view('includes/menu');
-		$this->load->view('dadosDataBase');
+		$this->load->view('includes/retorno');
 		$this->load->view('includes/footer');
 	}	
 	function lerArquivo()

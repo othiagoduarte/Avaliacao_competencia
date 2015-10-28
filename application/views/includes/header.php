@@ -9,6 +9,4 @@
 <!-- CSS  -->
 <link href="<?php echo base_url('css/materialize.css')?>" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url('css/style.css')?>" rel="stylesheet" type="text/css" />
-<link href="<?php echo base_url('css/Sobre.css')?>" rel="stylesheet" type="text/css" />
-<link href="<?php echo base_url('css/Sobre.css')?>" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

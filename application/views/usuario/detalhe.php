@@ -7,45 +7,45 @@ if(! isset($usuario))
 <h5>Dados de acesso</h5>
 <div class="row">
   <div class="input-field col s4">
-    <input  id="fone" type="hidden" class="validate" name="id" value = "<?php echo $usuario->id ?>" >
-    <input  id="fone" type="text" class="validate" name="usuario" value = "<?php echo  $usuario->usuario ?>">
+    <input  id="fone" type="hidden" class="validate" name="id" value = "<?php echo $usuario->id ?>"  >
+    <input  id="fone" type="text" class="validate" name="usuario" value = "<?php echo  $usuario->usuario ?>" required >
     <label >Nome do Usuario</label>
   </div>
   <div class="input-field col s4">
-    <input  id="fone" type="password" class="validate" name="senha" value = "<?php echo $usuario->senha ?>">
+    <input  id="fone" type="password" class="validate" name="senha" value = "<?php echo $usuario->senha ?>" required >
     <label >senha</label>
   </div>
   <div class="input-field col s4">
-    <input  id="fone" type="password" class="validate" name="confirmacaoSenha" value = "<?php echo $usuario->senha ?>">
+    <input  id="fone" type="password" class="validate" name="confirmacaoSenha" value = "<?php echo $usuario->senha ?>" required >
     <label >confirmação da senha</label>
   </div>
 </div>
 <h5>Dados de cadastro</h5>
 <div class="row">
   <div class="input-field col s6">
-    <input  id="Nome" type="text" class="validate" name="nome" value = "<?php echo $usuario->nome ?>">
+    <input  id="Nome" type="text" class="validate" name="nome" value = "<?php echo $usuario->nome ?>" required >
     <label >Nome completo</label>
   </div>
   <div class="input-field col s3">
-    <input id="email" type="email" class="validate" name="email" value = "<?php echo $usuario->email ?>">
+    <input id="email" type="email" class="validate" name="email" value = "<?php echo $usuario->email ?>" required >
     <label for="email">Email</label>
   </div>
   <div class="input-field col s3">
-    <input  id="fone" type="text" class="validate" name="telefone" value = "<?php echo $usuario->telefone ?>">
+    <input  id="fone" type="text" class="validate" name="telefone" value = "<?php echo $usuario->telefone ?>"  >
     <label >Fone</label>
   </div>
 </div>
 <div class="row">
   <div class="input-field col s3">
-    <input  id="rg" type="text" class="validate" name="rg" value = "<?php echo $usuario->rg ?>">
+    <input  id="rg" type="text" class="validate" name="rg" value = "<?php echo $usuario->rg ?>" required >
     <label >RG</label>
   </div>
     <div class="input-field col s3">
-    <input  id="CPF" type="text" class="validate" name="cpf" value = "<?php echo $usuario->cpf ?>">
+    <input  id="CPF" type="text" class="validate" name="cpf" value = "<?php echo $usuario->cpf ?>" required >
     <label >CPF</label>
   </div>
   <div class="input-field col s3">
-    <input  id="mae" type="text" class="validate" name="mae" value = "<?php echo $usuario->mae ?>">
+    <input  id="mae" type="text" class="validate" name="mae" value = "<?php echo $usuario->mae ?>" required >
     <label >Mae</label>
   </div>
   <div class="input-field col s3">
@@ -55,7 +55,7 @@ if(! isset($usuario))
 </div>
 <div class="row">
   <div class="input-field col s6">
-    <input  id="endereco" type="text" class="validate" name="endereco" value = "<?php echo $usuario->endereco ?>">
+    <input  id="endereco" type="text" class="validate" name="endereco" value = "<?php echo $usuario->endereco ?>" required >
     <label >Endereço</label>
   </div>
   <div class="col s3 ">
@@ -83,6 +83,6 @@ if(! isset($usuario))
 </div>
 <div class="row ">
   <div class="input-field col s9">
-    <input  id="comentarios" type="text" class="validate" name="comentario" value = "<?php echo $usuario->comentario ?>">
+    <input  id="comentarios" type="text" class="validate" name="comentario" value = "<?php echo $usuario->comentario ?>" >
     <label >Comentarios</label>
   </div>

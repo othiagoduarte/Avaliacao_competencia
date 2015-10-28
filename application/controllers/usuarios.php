@@ -71,17 +71,14 @@ class Usuarios extends CI_Controller {
 		{
 			$model = $this->GetUsuarioInPost();
 			$model->update();
-			header("Location: /avaliacao"); #remover após revisar o fluxo de telas
+			
 			$data = array();
 			$data['title'] = 'Editar';
-			$data['mensagem'] = "Sucesso ao editar os dados do usuário";
-			$data['usuario'] = $model;
-			$data['lista_cidades'] = $this->cidade->GetCidades();
-			$data['lista_Estados'] = $this->uf->GetUfs();			
-			
+			$data['mensagemRetorno'] = "Sucesso ao editar os dados do usuário";
+						
 			$this->load->view('includes/header',$data);
 			$this->load->view('includes/menu');
-			$this->load->view('usuario/listar');
+			$this->load->view('includes/retorno');
 			$this->load->view('includes/footer');
 					
 		}else
@@ -119,11 +116,15 @@ class Usuarios extends CI_Controller {
 	{
 		$model =  $this->GetUsuarioInPost();
 		$model->delete();
-		header("Location: /avaliacao"); #remover após revisar o fluxo de telas
+		
 		$data = array();
-		$data['title'] = 'Visualizar';
+		$data['title'] = 'Excluir';
+		$data['mensagemRetorno'] = "Sucesso ao excluir o usuário";
+					
 		$this->load->view('includes/header',$data);
 		$this->load->view('includes/menu');
+		$this->load->view('includes/retorno');
+		$this->load->view('includes/footer');
 		
 	}
 	public function detalhe()
@@ -150,17 +151,14 @@ class Usuarios extends CI_Controller {
 			
 			$model = $this->GetUsuarioInPost();	
 			$model->insert();
-			header("Location: /avaliacao"); #remover após revisar o fluxo de telas
-			$data['title'] = 'Cadastro';
-			$data['mensagem'] = "Sucesso ao cadastrar usuário";
-			$data['usuario'] = $this->usuario->getbyId($this->usuario->lasId());		
-			$data['lista_usuarios'] = $this->usuario->GetUsuarios();
-			$data['lista_cidades'] = $this->cidade->GetCidades();
-			$data['lista_Estados'] = $this->uf->GetUfs();
-
+			
+			$data = array();
+			$data['title'] = 'Cadastrar';
+			$data['mensagemRetorno'] = "Sucesso ao cadastrar o usuário";
+						
 			$this->load->view('includes/header',$data);
 			$this->load->view('includes/menu');
-			$this->load->view('usuario/visualizar');
+			$this->load->view('includes/retorno');
 			$this->load->view('includes/footer');
 										
 		}else{
