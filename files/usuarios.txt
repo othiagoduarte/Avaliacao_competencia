@@ -1,1 +1,0 @@
-{"id":"1","nome":"Thiago Duarte","senha":"12345","usuario":"zeca","email":"thiago-duarte@outlook.com","rg":"5106029886","cpf":"02070168018","mae":"Maria","endereco":"Porto Alegre","estado":"1;","cidade":"2","telefone":"5189201771","pai":"Jo\u00e3o","comentario":"Dados b\u00e1sico"}
