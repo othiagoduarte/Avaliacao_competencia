@@ -1,6 +1,3 @@
-<IfModule authz_core_module>
-	Require all denied
-</IfModule>
-<IfModule !authz_core_module>
-	Deny from all
-</IfModule>
+<IfModule mod_rewrite.c> RewriteEngine On RewriteBase /   #Remove o acesso a pasta system RewriteCond %{REQUEST_URI} ^system.*   #Redireciona /index.php/nomedocontroller/ to /nomedocontroller/função/ RewriteRule ^(.*)$ index.php/$1 [L]   #se o arquivo não existir (um css ou javascript por exemplo) #ele redireciona para o index.php RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule ^(.*)$ index.php/$1 [L]
+
+Leia mais em: Introdução ao framework PHP CodeIgniter http://www.devmedia.com.br/introducao-ao-framework-php-codeigniter/27346#ixzz3q48xwh6B
